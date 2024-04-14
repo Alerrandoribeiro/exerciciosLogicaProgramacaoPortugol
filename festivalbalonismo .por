@@ -1,0 +1,43 @@
+//  Glauberty Alerrando Chagas Ribeiro
+
+/*4) Um festival de balonismo oferece passeios de balão.
+     Para cada 5 minutos de voo, são necessários 10m³ (metros cúbicos) de gás, sendo que o metro cúbico de gás custa R$15 reais.
+     No balão cabem no máximo 4 pessoas.
+     O cálculo do valor do passeio é feito somando o valor gasto em gás, mais uma taxa de R$20 reais por pessoa.
+     Criar um programa que pergunte quantas pessoas vão no passeio e o tempo de passeio. Mostrar na tela o total cobrado pelo passeio. */
+
+// Para cada 5 minutos de voo, são necessários 10m³ (metros cúbicos) de gás - ok
+// o metro cúbico de gás custa R$15 reais - ok
+// No balão cabem no máximo 4 pessoas - ok
+// o valor do passeio é feito somando o valor gasto em gás, mais uma taxa de R$20 reais por pessoa - ok
+//  Criar um programa que pergunte quantas pessoas vão no passeio - ok
+//  Criar um programa que pergunte tempo de passeio - ok
+//  Mostrar na tela o total cobrado pelo passeio - ok
+
+programa {
+  funcao inicio() {
+    // criando variáveis 
+    inteiro quatidadePessoasPasseio
+    real tempoPasseio, totalCobradoPasseio, metroCubicoGas, precoMinutoGasVoo, umMetroCubicoGasVooGasta , taxaPorPessoaVoo, totalTaxaVoo
+   // Criar um programa que pergunte quantas pessoas vão no passeio
+   escreva("Digite quantas pessoas vão no passeio: ")
+   leia(quatidadePessoasPasseio)
+   //  Criar um programa que pergunte tempo de passeio
+   escreva("Digite o tempo do passeio: ")
+   leia(tempoPasseio)
+   
+   taxaPorPessoaVoo = 20 // Taxa cobrada no voo por pessoa 
+   umMetroCubicoGasVooGasta = 2 // Um minuto de voo gasta 2 metros cúbico de gás
+   metroCubicoGas = 15 // Preço do metro cúbico de gás 
+   precoMinutoGasVoo = umMetroCubicoGasVooGasta  * metroCubicoGas * tempoPasseio // gás gasto 2 X preço do de um metro de gás 15 reais X tempo que durou o passeio 
+   totalTaxaVoo =  taxaPorPessoaVoo * quatidadePessoasPasseio // taxa de 20 reais por pessoa X quantidade de pessoas do voo  
+   totalCobradoPasseio = totalTaxaVoo + precoMinutoGasVoo  // total do passeio =  valor das taxas/pessoas + o valor do minuto de voo 
+   // mostrando os resultados na tela 
+   escreva("\nQuantidade de pessoas: " + quatidadePessoasPasseio + " pessoa(s)") // quantidade de pessoas no voo 
+   escreva("\nValor total cobrado em taxas: " + totalTaxaVoo + " R$") // total de taxas por pessoa
+   escreva("\nMinutos de voo: " + tempoPasseio + " minuto(s)") // tempo de voo
+   escreva("\nValor gasto em gás: " + precoMinutoGasVoo + " R$" ) // preço do gás gasto no voo 
+   escreva("\nTotal passeio: " + totalCobradoPasseio + " R$\n") // valor total a ser cobrado no passeio
+
+  }
+}
